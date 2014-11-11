@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+	PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper>
+	<resultMap id="userMap" type="User">
+		<id property="id" column="id" javaType="java.lang.Long" />
+		<result property="userName" column="user_name" javaType="java.lang.String" />
+		<result property="password" column="password" javaType="java.lang.String" />
+		<result property="nickName" column="nick_name" javaType="java.lang.String" />
+		<result property="photoUrl" column="photo_url" javaType="java.lang.String" />
+		<result property="realName" column="real_name" javaType="java.lang.String" />
+		<result property="gender" column="gender" javaType="java.lang.Integer" />
+		<result property="birthday" column="birthday" javaType="java.util.Date" />
+		<result property="phone" column="phone" javaType="java.lang.String" />
+		<result property="email" column="email" javaType="java.lang.String" />
+		<result property="address" column="address" javaType="java.lang.String" />
+		<result property="registerDate" column="register_date" javaType="java.util.Date" />
+	</resultMap>
+</mapper>

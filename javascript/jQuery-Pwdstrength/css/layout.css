@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+.psv_container, .psv_container ul{ margin:0px; padding:0px; width:179px; min-width:179px; height:15px; min-height:15px; }
+.psv_container{  border:1px solid #666; top:0px; left:0px; display:none }
+.psv_container ul{ list-style:none; font-size:12px; line-height:15px; margin:0xp; padding:0px; }
+.psv_container ul li { float:left; text-align:center; margin:0xp; padding:0px; }
+.psv_container ul .l_strength, .psv_container ul .m_strength, .psv_container ul .h_strength{ width:59px; }
+.psv_container ul .strength_space{ width:1px; background:#666; overflow:hidden; }

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LearnHTML5 - 1.video</title>
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#btn_pop").click(function(){
+			var vdo = document.getElementById("vdo_main");
+			if(vdo.paused){
+				vdo.play();
+			} else {
+				vdo.pause();
+			}
+		});
+	});
+</script>
+</head>
+
+<body>
+	<div>
+        <h3>视频格式&nbsp;&lt;video&nbsp;src=''&gt;&lt;/video&gt;</h3>
+        <p>当前，video 元素支持三种视频格式：</p>
+        <table cellspacing="0" class="tab_generic">
+            <tr>
+                <th>格式</th>
+                <th style="width:16%">IE</th>
+                <th style="width:16%">Firefox</th>
+                <th style="width:16%">Opera</th>
+                <th style="width:16%">Chrome</th>
+                <th style="width:16%">Safari</th>
+            </tr>
+            <tr>
+                <td>Ogg</td>
+                <td>No</td>
+                <td>3.5+</td>
+                <td>10.5+</td>
+                <td>5.0+</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>MPEG 4</td>
+                <td>9.0+</td>
+                <td>No</td>
+                <td>No</td>
+                <td>5.0+</td>
+                <td>3.0+</td>
+            </tr>
+            <tr>
+                <td>WebM</td>
+                <td>No</td>
+                <td>4.0+</td>
+                <td>10.6+</td>
+                <td>6.0+</td>
+                <td>No</td>
+            </tr>
+        </table>
+    </div>
+	<div>
+    	<h3>一个简单的示例</h3>
+        <font color="red">为视频创建简单的播放/暂停</font>&emsp;<button id="btn_pop">播放/暂停</button><br /><br />
+        <video id="vdo_main" src="resource/S2.mp4" width="320" height="240" controls></video>
+    </div>
+</body>
+</html>

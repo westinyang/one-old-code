@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+	PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
+	"http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="cn.jelly.music.entity.User" alias="User" />
+		<typeAlias type="cn.jelly.music.entity.Dictionary" alias="Dictionary" />
+		<typeAlias type="cn.jelly.music.entity.Singer" alias="Singer" />
+		<typeAlias type="cn.jelly.music.entity.Music" alias="Music" />
+		<typeAlias type="cn.jelly.music.entity.Collection" alias="Collection" />
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="cn/jelly/music/dao/mapper/CollectionMapper.xml" />
+		<mapper resource="cn/jelly/music/dao/mapper/DictionaryMapper.xml" />
+		<mapper resource="cn/jelly/music/dao/mapper/MusicMapper.xml" />
+		<mapper resource="cn/jelly/music/dao/mapper/SingerMapper.xml" />
+		<mapper resource="cn/jelly/music/dao/mapper/UserMapper.xml" />
+	</mappers>
+</configuration>

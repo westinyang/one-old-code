@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	var TAG_BR = "#{br}";
+	$(function(){
+		$("#btn_test").click(function(){
+			
+			var t = $("#test_t").val();
+			var t2 = t.replace(/\n/g, TAG_BR);
+			$("body").append(t2);
+		});
+		
+		$("#test_t").keypress(function(e){
+			if(e.ctrlKey && e.which == 13 || e.which == 10 || e.which == 13) {
+				//
+				
+			}
+		});
+	});
+</script>
+</head>
+
+<body>
+<div style="width:400px; height:480px; overflow:auto">
+<!--
+    <div style="background:#CCC; width:420px; height:2800px">
+        <div style="height:2700px;">
+        	<ul>
+            	<li>姓名：<input type="text" /></li>
+                <li>年龄：<input type="text" /></li>
+                <li id="zz">住址：<input type="text" /></li>
+            </ul>
+        </div>
+        <button id="btn_test">Test</button>&emsp;<a id="a_test" href="#zz">Top</a>
+    </div>
+-->
+    
+    <textarea id="test_t" style="width:320px; height:100px;"></textarea>
+    <button id="btn_test">Test</button>
+</div>
+</body>
+</html>

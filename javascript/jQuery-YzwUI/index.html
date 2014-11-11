@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>YzwUI demo</title>
+<link rel="stylesheet" type="text/css" href="themes/default/yzwui.css" />
+<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="jquery-yzwui-1.0.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#showAlert").click(function(){
+			var flag = $.msg.alert({
+				title: "来自网页的消息",			// default: '提示信息';
+				content: "万万没想到，你还是单击了我！<br/>万万没想到，你还是单击了我！<br/>万万没想到，你还是单击了我！",	// default: '';
+				//globalAlign: "center",		// default: none; other: right, center;
+				//titleAlign: "right",			// default: left; other: right, center;
+				//contentAlign: "center",		// default: left; other: right, center;
+				//buttonAlign: "left",			// default: right; other: left, center;
+			});
+		});
+		$("input").hint({
+			//color: "#6F6",			// default: #666;
+			//fontStyle: "normal",	// default: italic; other: normal;
+		});
+	});
+</script>
+</head>
+
+<body style="font-size:14px; background:url(themes/default/images/A28-1.png)">
+    <table align="center" style="min-width:480px;">
+    <tr>
+    <td style="border-right:5px solid #FFF; border-bottom:4px solid #333; padding:50px 100px 280px 100px; background:url(themes/default/images/A39-1.png)">
+    <h5 style="text-align:right; color:#F66">Some demos</h5>
+        <h3>1.Dialog提示</h3>
+        <button id="showAlert" style="width:100%">单击这里显示一个提示信息!</button>
+        <br />
+        <h3>2.给input添加默认提示</h3>
+        <label for="name">姓名：</label><input id="name" type="text" value="" hint="input your name" style="width:200px" />
+        <br /><br />
+        <label for="name">邮箱：</label><input id="email" type="text" value="" hint="input your email" style="width:200px" />
+        
+        <h3>More...</h3>
+    <td>
+    </tr>
+    </table>
+</body>
+</html>

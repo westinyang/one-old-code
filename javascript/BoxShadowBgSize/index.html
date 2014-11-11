@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="script/jquery.js"></script>
+<style type="text/css">
+	.header{
+		width:540px;
+		height:300px;
+		background-repeat:no-repeat;
+		background-position:center center;
+		margin-top:50px;
+		margin-left:50px;
+		background:url(images/1.jpg) no-repeat center center;
+		background-size:98.6% 97.2%;
+		border:0px solid #000;
+		-webkit-box-shadow:rgba(0,0,0,0.20)0 10px 10px;
+		-moz-box-shadow:rgba(0,0,0,0.20)0 10px 10px;
+		box-shadow:rgba(0,0,0,0.50)0 10px 10px;
+	}
+	.hint{ background:#000; width:98.6%; margin:0px auto; height:80px; position:relative; top:203px; opacity:0.5; color:#FFF; }
+</style>
+<script type="text/javascript">
+	$(function(){
+		$(".header").mouseover(function(){
+			$(this).find(".hint").show();
+			//$("#hint").fadeIn();
+		}).mouseout(function(){
+			$(this).find(".hint").hide();
+			//$("#hint").fadeOut();
+		});
+	});
+</script>
+</head>
+
+<body style="background:#FFF">
+<div class="header" style="float:left;">
+	<div class="hint" style="display:none;">
+    	<p style="font-size:13px; padding:10px;">少壮不努力，自挂东南枝；爹娘闻女来，自挂东南枝；人生在世不如意，不如自挂东南枝。</p>
+    </div>
+</div>
+<div class="header" style="float:left; background-image:url(images/2.jpg)">
+	<div class="hint" style="display:none;">
+    	<p style="font-size:13px; padding:10px;">少壮不努力，自挂东南枝；爹娘闻女来，自挂东南枝；人生在世不如意，不如自挂东南枝。</p>
+    </div>
+</div>
+<div class="header" style="float:left; background-image:url(images/3.jpg)">
+	<div class="hint" style="display:none;">
+    	<p style="font-size:13px; padding:10px;">少壮不努力，自挂东南枝；爹娘闻女来，自挂东南枝；人生在世不如意，不如自挂东南枝。</p>
+    </div>
+</div>
+<div class="header" style="float:left; background-image:url(images/4.jpg)">
+	<div class="hint" style="display:none;">
+    	<p style="font-size:13px; padding:10px;">少壮不努力，自挂东南枝；爹娘闻女来，自挂东南枝；人生在世不如意，不如自挂东南枝。</p>
+    </div>
+</div>
+<div class="header" style="float:left; background-image:url(images/5.jpg)">
+	<div class="hint" style="display:none;">
+    	<p style="font-size:13px; padding:10px;">少壮不努力，自挂东南枝；爹娘闻女来，自挂东南枝；人生在世不如意，不如自挂东南枝。</p>
+    </div>
+</div>
+<div class="header" style="float:left; margin-bottom:100px; background-image:url(images/6.jpg)">
+	<div class="hint" style="display:none;">
+    	<p style="font-size:13px; padding:10px;">少壮不努力，自挂东南枝；爹娘闻女来，自挂东南枝；人生在世不如意，不如自挂东南枝。</p>
+    </div>
+</div>
+</body>
+</html>

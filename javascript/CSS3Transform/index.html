@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+	var deg = 1;
+	var itvl;
+	var is_run = false; 
+	$(function(){
+		$("#btn_1").click(function(){
+			if(!is_run){
+				itvl = setInterval(change_deg, 1);
+				is_run = true;
+				next();
+			}
+		});
+		$("#btn_2").click(function(){
+			window.clearInterval(itvl);
+			is_run = false;
+		});
+	});
+	function change_deg(){
+		$("#test").css("transform", "rotate(" + deg + "deg)");
+		deg += 5;
+	}
+	function next(){
+		setTimeout(function(){
+			$("#test").css("background-color", "#FC0");
+		}, 2000);
+		setTimeout(function(){
+			$("#test").css("background-color", "#F90");
+		}, 4000);
+		setTimeout(function(){
+			$("#test").css("background-color", "#F60");
+		}, 6000);
+		setTimeout(function(){
+			$("#test").css("background-color", "#F30");
+		}, 8000);
+		setTimeout(function(){
+			$("#test").css("background-color", "#F00");
+		}, 10000);
+		setTimeout(function(){
+			$("#test").css("background-color", "#C00");
+			next();
+		}, 12000);
+	}
+</script>
+<title>无标题文档</title>
+</head>
+
+<body>
+	<div id="test" style="margin-top:200px; margin-left:200px; width:100px; height:80px; background-color:#FF0; color:#FFF">
+    	===========
+    </div>
+    <input type="button" id="btn_1" value="Start" />
+    <input type="button" id="btn_2" value="Stop" />
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+	PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper>
+	<resultMap id="singerMapper" type="Singer">
+		<id property="id" column="id" javaType="java.lang.Long" />
+		<result property="name" column="name" javaType="java.lang.String" />
+		<result property="abbr" column="abbreviate" javaType="java.lang.String" />
+		<result property="name" column="photo_url" javaType="java.lang.String" />
+		<result property="gender" column="gender" javaType="java.lang.Integer" />
+		<result property="birthday" column="birthday" javaType="java.util.Date" />
+		<result property="desc" column="description" javaType="java.lang.String" />
+		<!--
+		<result property="type" column="type_id" javaType="Dictionary" />
+		-->
+	</resultMap>
+</mapper>

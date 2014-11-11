@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, ul, li{
+	margin:0px;
+	padding:0px;
+}
+body{
+	min-width:960px;
+	min-height:820px;
+	background:url(../imgs/A36-1.png);
+}
+img{
+	border:0px;
+}
+ul{
+	list-style:none;
+}
+a{
+	color:#9AE40A;
+	text-decoration:none;
+}
+
+#logo{
+	margin:0px;
+	color:#FFF;
+	font-size:36px;
+	font-family:'Trebuchet MS';
+	border:1px solid #FFF;
+	width:220px;
+	text-align:center;
+	line-height:85px;
+	float:right;
+	margin-right:9px;
+	background:url(../imgs/5x5.png);
+}
+#header{
+	width:100%;
+	height:85px;
+	background:url(../imgs/5x5.png);
+	background-color:#099;
+	padding:10px 0px;
+	border-bottom:5px solid #9AE40A;
+}
+#content{
+	width:100%;
+	height:530px;
+	padding-top:10px;
+	/*background-color:#C66;*/
+	min-width:1349px;
+}
+#content_left{
+	width:36.5%;
+	height:518px;
+	/*border:1px dashed #666;*/
+	float:left;
+}
+#content_right{
+	width:63.2%;
+	height:518px;
+	/*border:1px dashed #666;*/
+	float:left;
+}
+#content_right .type_link{
+	width:200px;
+	height:200px;
+	margin-left:64px;
+	margin-top:40px;
+	background:#9AE40A;
+	float:left;
+	text-align:center;
+	line-height:200px;
+	font-weight:bold;
+	font-size:24px;
+	cursor:pointer;
+	box-shadow:rgba(0,0,0,0.50)0 4px 10px;
+}
+#content_right .disable_type_link{
+	background:#CCC;
+}
+
+#song_panal{
+	width:495px;
+	height:72px;
+	position:fixed;
+	z-index:99999;
+	left:0px;
+	bottom:10px;
+	margin-left:-480px;
+	opacity:0.90;
+}
+#sp_content, #song_tmp_list_title, #song_tmp_list_panal, #audio_player{
+	width:480px;
+}
+#sp_content{
+	height:auto;
+	float:left;
+}
+#sp_shrink{
+	width:15px;
+	height:72px;
+	vertical-align:bottom;
+	float:left;
+	line-height:72px;
+	cursor:pointer;
+	background-color:#383838;
+	color:#FFF;
+	text-align:center;
+	float:left;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+}
+#song_tmp_list_title{
+	height:29px;
+	border-bottom:1px solid #9AE40A;
+	background:#000;
+	color:#FFF;
+	text-align:center;
+	line-height:30px;
+	font-size:14px;
+	cursor:pointer;
+}
+#song_tmp_list_panal{
+	height:0px;
+	background:#1B1B1B;
+	overflow-y:auto;
+	color:#FFF;
+	scrollbar-face-color:#3B3B3B;	/* 滚动条颜色 #3B3B3B #9AE40A */
+	scrollbar-shadow-color:#1B1B1B; /* 阴影颜色 */
+	scrollbar-arrow-color:#9B9B9B;	/* 箭头颜色 */
+	scrollbar-track-color:#1B1B1B;	/* 轨迹底色 */
+}
+#player_panal{
+	width:100%;
+	height:40px;
+	background:#000
+}
+#song_tmp_list_tab{
+	width:94%;
+	font-size:12px;
+	margin:0 auto;
+}
+#song_tmp_list_tab tr{
+	width:100%;
+	cursor:pointer;
+	color:#999999;
+}
+#song_tmp_list_tab tr td .col_song{
+	width:55%;
+}
+#song_tmp_list_tab tr td .col_singer{
+	width:30%;
+}
+#song_tmp_list_tab tr td .col_time{
+	width:15%;
+}
+#audio_player{
+	height:47px;
+	margin:0px;
+	padding:0px;
+}
+

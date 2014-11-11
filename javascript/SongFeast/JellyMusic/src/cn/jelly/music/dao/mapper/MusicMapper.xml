@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+	PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper>
+	<resultMap id="musicMapper" type="Music">
+		<id property="id" column="id" javaType="java.lang.Long" />
+		<result property="name" column="name" javaType="java.lang.String" />
+		<result property="abbr" column="abbreviate" javaType="java.lang.String" />
+		<result property="photoUrl" column="photo_url" javaType="java.lang.String" />
+		<result property="audioUrl" column="audio_url" javaType="java.lang.String" />
+		<result property="lyricUrl" column="lyric_url" javaType="java.lang.String" />
+		<result property="videoUrl" column="video_url" javaType="java.lang.String" />
+		<!--
+		<result property="singer" column="singer_id" javaType="Singer" />
+		<result property="type" column="type_id" javaType="java.lang.String" />
+		-->
+	</resultMap>
+</mapper>

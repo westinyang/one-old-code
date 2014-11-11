@@ -1,0 +1,126 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+	body, div{ margin:0px; padding:0px}
+	#top{ border-bottom:5px solid #FFF; padding:10px; margin-bottom:15px; height:55px; background:#9F9 }
+	.btn_1{ border:1px solid; border-right:2px solid; border-bottom:2px solid; width:80px; height:22px; background:#FFF; }
+	.div_1{ background:#FeF; border:1px solid #930; font-size:13px; position:absolute; right:0px; top:0px; width:240px; opacity:0.6; height:50px; padding:0px; }
+</style>
+<script type="text/javascript">
+var index = 0;
+var speed = 500;
+$(function(){
+	$("#btn_submit").click(function(){
+		index = 0;
+		next();
+	});
+	$(".btn_1").mousedown(function(){
+		$(this).css("border-top", "2px solid");
+		$(this).css("border-left", "2px solid");
+		$(this).css("border-bottom", "1px solid");
+		$(this).css("border-right", "1px solid");
+		$(this).css("background", "#F0F0F0");
+	});
+	$(".btn_1").mouseup(function(){
+		$(this).css("border-top", "1px solid");
+		$(this).css("border-left", "1px solid");
+		$(this).css("border-bottom", "2px solid");
+		$(this).css("border-right", "2px solid");
+		$(this).css("background", "#FFF");
+	});
+	$(".div_1").mouseover(function(){
+		$(this).css("opacity", 1);
+		$(this).css("font-weight", "bold");
+	});
+	$(".div_1").mouseout(function(){
+		$(this).css("opacity", 0.6);
+		$(this).css("font-weight", "normal");
+	});
+	$(".div_1").click(function(){
+		$(this).css("opacity", 0.6);
+		$(this).animate({
+			width: 'toggle',
+			height: 'toggle',
+			opacity: 'toggle',
+			right: 'toggle',
+			top: 'toggle',
+			marginTop: 'toggle',
+			marginRight: 'toggle'
+		}, speed);
+	});
+});
+function next(){
+	if($(".div_1").length + 1 == index){
+		return;
+	}
+	$($(".div_1")[index]).animate({
+		width: 'toggle',
+		height: 'toggle',
+		opacity: 'toggle',
+		right: 'toggle',
+		top: 'toggle',
+		marginTop: 'toggle',
+		marginRight: 'toggle'
+	}, speed);
+	setTimeout("next(index++)", 100);
+}
+</script>
+</head>
+
+<body style="background:#f0f0f0; font-size:14px;">
+	<div id="top">
+    	
+    </div>
+    <div style="background:#FFF; width:100%; height:400px">
+    	<!-- FORM -->
+    <div>
+    	<table style="font-size:14px" align="center">
+        	<tr>
+            	<td>用户名</td>
+                <td><input type="text" class="txt_1" /></td>
+            </tr>
+            <tr>
+            	<td>密码</td>
+                <td><input type="text" class="txt_1" /></td>
+            </tr>
+            <tr>
+            	<td>验证码</td>
+                <td><input type="text" class="txt_1" /></td>
+            </tr>
+            <tr>
+            	<td>&nbsp;</td>
+                <td><input type="submit" id="btn_submit" class="btn_1" value="提&emsp;交" /></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+    
+    
+    <!-- HINT -->
+    <div id="div_1" class="div_1"  style="margin-top:60px; margin-right:0px; background:#FCC; border:1px solid #CCC; border-right:0px;">
+    	<p style="padding:10px; margin:0px"><span style="color:#F36; font-weight:bold; font-size:14px;">！</span><span>请输入用户名</span></p>
+    </div>
+    <div id="div_1" class="div_1" style="margin-top:130px; margin-right:0px;  background:#CFF; border:1px solid #CCC; border-right:0px;">
+    	<p style="padding:10px; margin:0px"><span style="color:#F36; font-weight:bold; font-size:14px;">！</span><span>请输入密码</span></p>
+    </div>
+    <div id="div_1" class="div_1" style="margin-top:200px; margin-right:0px;  background:#FFC; border:1px solid #CCC; border-right:0px;">
+    	<p style="padding:10px; margin:0px"><span style="color:#F36; font-weight:bold; font-size:14px;">×&nbsp;</span><span>验证码输入不正确</span></p>
+    </div>
+        <div id="div_1" class="div_1"  style="margin-top:270px; margin-right:0px; background:#FCF; border:1px solid #CCC; border-right:0px;">
+    	<p style="padding:10px; margin:0px"><span style="color:#F36; font-weight:bold; font-size:14px;">！</span><span>请输入用户名</span></p>
+    </div>
+    <div id="div_1" class="div_1" style="margin-top:340px; margin-right:0px;  background:#CCF; border:1px solid #CCC; border-right:0px;">
+    	<p style="padding:10px; margin:0px"><span style="color:#F36; font-weight:bold; font-size:14px;">！</span><span>请输入密码</span></p>
+    </div>
+    <div id="div_1" class="div_1" style="margin-top:410px; margin-right:0px;  background:#FCC; border:1px solid #CCC; border-right:0px;">
+    	<p style="padding:10px; margin:0px"><span style="color:#F36; font-weight:bold; font-size:14px;">！</span><span>验证码输入不正确</span></p>
+    </div>
+    <div id="div_1" class="div_1" style="margin-top:480px; margin-right:0px;  background:#CFC; border:1px solid #CCC; border-right:0px;">
+    	<p style="padding:10px; margin:0px"><span style="color:#F36; font-weight:bold; font-size:14px;">！</span><span>请输入密码</span></p>
+    </div>
+</body>
+</html>

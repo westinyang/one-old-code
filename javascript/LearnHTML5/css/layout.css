@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font-size:14px;
+	background:#F0F0F0
+	}
+.tab_generic{
+	border-top:1px solid;
+	border-left:1px solid
+	}
+.tab_generic tr td, .tab_generic tr th{
+	border-bottom:1px solid;
+	border-right:1px solid
+	}

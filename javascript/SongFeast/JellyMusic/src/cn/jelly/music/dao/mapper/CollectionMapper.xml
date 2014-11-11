@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+	PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper>
+	<resultMap id="collectionMap" type="Collection">
+		<id property="id" column="id" javaType="java.lang.Long" />
+		<result property="photoUrl" column="photo_url" javaType="java.lang.String" />
+		<!--
+		<result property="user" column="user_id" javaType="User" />
+		<result property="singer" column="singer_id" javaType="Singer" />
+		<result property="music" column="music_id" javaType="Music" />
+		-->
+		<result property="collectDate" column="collect_date" javaType="java.util.Date" />
+	</resultMap>
+</mapper>

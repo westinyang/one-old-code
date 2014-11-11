@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome to Song Feast</title>
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/sf-fn.js"></script>
+<script type="text/javascript">
+	$(function(){
+		initSongPanal();
+		
+		$("#logo").mouseover(function(){
+			//$(this).css("color", "#9AE40A");
+			$(this).css("backgroundColor", "#9AE40A");
+		}).mouseout(function(){
+			//$(this).css("color", "#FFF");
+			$(this).css("backgroundColor", "#099");
+		});
+		
+		$(".type_link").click(function(){
+			if($(this).css("position") == "static"){
+				var params = { width: "728px", height: "440px"};
+				$(this).css("position", "absolute");
+				$(this).animate(params, "fast", function(){});
+			}else{
+				var params = { width: "200px", height: "200px"};
+				$(this).animate(params, "fast", function(){$(this).css("position", "static");});
+			}
+		});
+	});
+</script>
+</head>
+
+<body>
+	<div id="header">
+    	<div id="nav" style="float:left; width:640px; height:30px; margin-left:10px; margin-top:65px;">
+        	<ul style="text-align:center; line-height:30px; font-size:14px; font-weight:bold">
+            	<li style="width:80px; height:30px; float:left; margin-right:20px; cursor:pointer; background-color:#9AE40A">首页</li>
+                <li style="width:80px; height:30px; float:left; margin-right:20px; cursor:pointer; background-color:#9F6">登录</li>
+                <li style="width:80px; height:30px; float:left; margin-right:20px; cursor:pointer; background-color:#9F9">注册</li>
+                <li style="width:80px; height:30px; float:left; margin-right:20px; cursor:pointer; background-color:#9FC">反馈</li>
+                <li style="width:80px; height:30px; float:left; margin-right:20px; cursor:pointer; background-color:#9FF">更多</li>
+            </ul>
+        </div>
+    	<a href="javascript:void(0);"><h1 id="logo">Song Feast</h1></a>
+    </div>
+    <div id="content">
+    	<div id="content_left">
+        	<h2 style="text-align:center; margin-top:45px; border-bottom:1px dashed #9AE40A; color:#6AE40A;">实验室</h2>
+            <table style="width:100%;" border="1">
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+                <tr>
+                	<td>musicName</td>
+                    <td>singer</td>
+                    <td>time</td>
+                </tr>
+            </table>
+        </div>
+        <div id="content_right">
+        	<div class="type_link" style="background:#CC3">?搜索</div>
+            <div id="tl_music" class="type_link" style="background:#3CC">*音乐库</div>
+            <div class="type_link" style="background:#C3C">@我的SF</div>
+            <div class="type_link" style="background:#C33">!Top</div>
+            <div class="type_link" style="background:#3C3">&关于我们</div>
+            <div class="type_link disable_type_link"><font color="#666666">...尽请期待</font></div>
+        </div>
+    </div>
+    
+    <!-- song_panal start -->
+	<div id="song_panal">
+    	<div id="sp_content">
+            <div id="song_tmp_list_title">〓&nbsp;临时播放列表</div>
+            <div id="song_tmp_list_panal">
+                <table id="song_tmp_list_tab" cellspacing="0" cellpadding="6">
+                	<tr>
+                    	<td>What its like</td>
+                        <td>Aura Dione</td>
+                        <td>03:22</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr style="color:#9AE40A">
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                    <tr>
+                    	<td class="col_song">对不起我还爱你</td>
+                        <td class="col_singer">回音哥</td>
+                        <td class="col_time">04:03</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="player_panal">
+                <audio id="audio_player" src="source/Aura Dione - What its like.mp3" controls>您的浏览器不支持audio标签</audio>
+            </div>
+        </div>
+        <div id="sp_shrink" title="打开面板">&gt;</div>
+    </div>
+    <!-- song_panal end -->
+</body>
+</html>

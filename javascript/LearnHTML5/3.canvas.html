@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LearnHTML5 - 1.video</title>
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 画矩形
+		var c = document.getElementById("canvas1");
+		var cxt = c.getContext("2d");
+		cxt.fillStyle = "#FF00FF";
+		cxt.fillRect(10, 10, 180, 80);
+		
+		// 画线
+		var c = document.getElementById("canvas2");
+		var cxt = c.getContext("2d");
+		cxt.moveTo(10, 10);
+		cxt.lineTo(180, 80);
+		cxt.lineTo(10, 80);
+		cxt.lineTo(180, 10);
+		cxt.stroke();
+		
+		// 画圆
+		var c = document.getElementById("canvas3");
+		var cxt = c.getContext("2d");
+		cxt.fillStyle="#00FF00";
+		cxt.beginPath();
+		cxt.arc(100, 60, 50, 0, Math.PI * 2, true);
+		cxt.closePath();
+		cxt.fill();
+		
+		// 指定颜色绘制渐变背景
+		var c = document.getElementById("canvas4");
+		var cxt = c.getContext("2d");
+		var grd = cxt.createLinearGradient(10, 10, 180, 80);
+		grd.addColorStop(0, "#FF00FF");
+		grd.addColorStop(1, "#00FF00");
+		cxt.fillStyle = grd;
+		cxt.fillRect(10, 10, 180, 80);
+		
+		// 把图像放在画布上【部分浏览器支持】
+		var c = document.getElementById("canvas5");
+		var cxt = c.getContext("2d");
+		var img = new Image()
+		img.src = "images/test1.png"
+		cxt.drawImage(img, 0, 0);
+	});
+</script>
+</head>
+
+<body>
+	<div>
+        <h3>画布&nbsp;&lt;canvas&nbsp;id=''&gt;&lt;/canvas&gt;</h3>
+        <p>HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。</p>
+        <canvas id="canvas1" width="200" height="200" style="border:1px solid #666"></canvas>
+        <canvas id="canvas2" width="200" height="200" style="border:1px solid #666"></canvas>
+        <canvas id="canvas3" width="200" height="200" style="border:1px solid #666"></canvas>
+        <canvas id="canvas4" width="200" height="200" style="border:1px solid #666"></canvas>
+        <canvas id="canvas5" width="200" height="200" style="border:1px solid #666"></canvas>
+	</div>
+</body>
+</html>

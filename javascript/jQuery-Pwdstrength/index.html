@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery-pwd-strength-1.0</title>
+<link rel="stylesheet" type="text/css" href="css/layout.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-pwdstrength-1.0.js"></script>
+<style type="text/css">
+	.lbl_hint{ text-align:right; font-size:12px; }
+	.txt_pwd{ width:180px; height:20px; padding:0px; margin:0px; }
+</style>
+<script type="text/javascript">
+	$(function(){
+		$("#testForm").submit(function(){
+			var t1 = $("#pwd").getSL();
+			var t2 = $("#repwd").getSL();
+			alert("第一个密码框强度：" + t1 + "\r\n" + "第二个密码框强度：" + t2 + "\r\n[\r\n " + "NULL: 无强度,\r\n L: 弱,\r\n M: 中,\r\n H: 强," + "\r\n]");
+			return false;
+		});
+		$("[vpsid]").psv({
+			//position: "right", // 取值：top,right,bottom,left，默认'bottom'
+			//excursion: 1,	// 相对偏移值，默认1，当position为'bottom'时，偏移值无效
+			//color: "#FFF",		// 字体颜色，默认'#000'
+			//dcolor: "#000",		// 底色，默认'#F0F0F0'
+			//lcolor: "#F66",		// 低强度颜色，默认'#F66'
+			//mcolor: "#FF6",		// 中强度颜色，默认'#FF6'
+			//hcolor: "#6F6"		// 高强度颜色，默认'#6F6'
+			//注意，在IE6中，最后一个参数后面不要跟','这个符号，否则报错，其他浏览器正常
+		});
+	});
+</script>
+</head>
+
+<body style="background:#F9F9F9">
+	<form action="index.html" method="post" id="testForm">
+        <table width="480px" border="0" align="center">
+            <tr>
+
+                <td colspan="2"><h2 style="text-align:center; border-bottom:1px solid #666">A PWD STRENGTH VALIDATOR DEMO</h2></td>
+            </tr>
+            <tr>
+                <td class="lbl_hint">密码：</td>
+                <td><input type="password" id="pwd" class="txt_pwd" vpsid="1" /></td>
+            </tr>
+            <tr>
+                <td class="lbl_hint">确认密码：</td>
+                <td><input type="password" id="repwd" class="txt_pwd" vpsid="2" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="提&emsp;交" style="width:184px; height:26px;" /></td>
+            </tr>
+            <tr>
+            	<td>&nbsp;</td>
+            	<td><p style="font-size:12px;">提示：单击提交可查看密码强度...</p></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LearnHTML5 - 1.video</title>
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#btn_pop").click(function(){
+			var ado = document.getElementById("ado_main");
+			if(ado.paused){
+				ado.play();
+			} else {
+				ado.pause();
+			}
+		});
+	});
+</script>
+</head>
+
+<body>
+	<div>
+        <h3>音频格式&nbsp;&lt;audio&nbsp;src=''&gt;&lt;/audio&gt;</h3>
+        <p>当前，video 元素支持三种音频格式：</p>
+        <table cellspacing="0" class="tab_generic">
+            <tr>
+                <th>&nbsp;</th>
+                <th style="width:16%;">IE 9</th>
+                <th style="width:16%;">Firefox 3.5</th>
+                <th style="width:16%;">Opera 10.5</th>
+                <th style="width:16%;">Chrome 3.0</th>
+                <th style="width:16%;">Safari 3.0</th>
+            </tr>
+            <tr>
+                <td>Ogg Vorbis</td>
+                <td>&nbsp;</td>
+                <td>&#8730;</td>
+                <td>&#8730;</td>
+                <td>&#8730;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>MP3</td>
+                <td>&#8730;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&#8730;</td>
+                <td>&#8730;</td>
+            </tr>
+            <tr>
+                <td>Wav</td>
+                <td>&nbsp;</td>
+                <td>&#8730;</td>
+                <td>&#8730;</td>
+                <td>&nbsp;</td>
+                <td>&#8730;</td>
+			</tr>
+		</table>
+    </div>
+	<div>
+    	<h3>一个简单的示例</h3>
+        <font color="red">为音频创建简单的播放/暂停</font>&emsp;<button id="btn_pop">播放/暂停</button><br /><br />
+        <audio id="ado_main" src="resource/Shahzoda - Bora Bora.mp3" width="320" height="240" controls></audio>
+    </div>
+</body>
+</html>
