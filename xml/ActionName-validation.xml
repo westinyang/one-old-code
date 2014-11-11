@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE validators PUBLIC 
+  		"-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="house.title">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>标题不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">20</param>
+			<param name="minLength">6</param>
+			<message>标题长度必须在 ${minLength}和 ${maxLength}之间 </message>
+		</field-validator>
+	</field>
+	<field name="house.floorage">		
+		<field-validator type="int">		
+			<param name="max">200</param>			
+			<message>面积必须小于等于 ${max}</message>
+		</field-validator>
+	</field>
+	<field name="house.price">
+		<field-validator type="double">
+			<message>价格输入错误</message>
+		</field-validator>		
+	</field>	
+	<field name="house.contact">		
+		<field-validator type="requiredstring">
+			<message>联系方式不能为空</message>
+		</field-validator>		
+		<field-validator type="regex">
+			<param name="expression">^(\d{3,4}-){0,1}(\d{7,8})$|^1[358]\d{9}$</param>
+			<message>联系方式格式不正确</message>
+		</field-validator>
+	</field>
+	<field name="house.description">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>详细信息不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">300</param>			
+			<message>详细信息长度要求小于 ${maxLength} </message>
+		</field-validator>
+	</field>
+</validators>  		

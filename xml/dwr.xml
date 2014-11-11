@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN"
+    "http://getahead.org/dwr/dwr30.dtd">
+
+<dwr>
+	<allow>
+		<create javascript="orgService" creator="spring">
+			<param name="beanName" value="orgService"></param>
+		</create>
+		
+		<convert match="com.accp.quicklyteam.entity.Org" converter="bean">
+			<param name="include" value="id,name"/>
+		</convert>
+		<!--   
+		下面这个配置主要为了显示异常信息，如果不配置的话，程序中所有的错误，  
+		都只弹出error的对话框，这样我们就看不到详细的错误信息，加大了调试难度，  
+		相对配置的话，就会把Error转换成具体的错误描述来看，就如同你在日志看到异常信息一样。  
+		 -->
+		<convert converter="bean" match="java.lang.StackTraceElement" />  
+		<convert converter="exception" match="java.lang.Exception"/>
+		
+	</allow>
+</dwr>
